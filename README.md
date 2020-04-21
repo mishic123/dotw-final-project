@@ -1,2 +1,11 @@
-# dotw-final-project
-Final Project for Drawing on the Web
+# Drawing on the Web - Final Project
+
+  For my final project, I will be creating 4 web drawings according to my interpretation of the 4 elements (fire, water, earth, air) with a fifth page that exhibits an animated interface including all of the elements. Nature can be beautiful, calm, powerful, dangerous, and vast. In each of my drawings, I aim to represent this complexity through my somewhat mystical interpretations of these 4 natural elements. 
+  
+  My goal is to emphasize the diverse “temperaments” of nature, its impressive beauty, the balance between the elements, as well as express the relationship between nature and man. No matter how hard we try, humans are merely a small force against nature. In each of my drawings, contrasting the big, bright illustrations I present to reflect the elements, I will include a very small-scaled human character that is meant to encapsulate the awe that humans should have for these natural forces as well as allude to how small we as humans are in the grand scheme of the natural world.
+  
+  The style of each drawing is influenced by my Chinese American identity and reflects my take on a traditional Chinese style of painting. With hand-drawn, digital illustrations that mimic East Asian traditional art, each drawing will appear as though a physical painting has come to life. Every one of the 4 element will be illustrated and animated in a way that correlates to my perception of the “personality” of each element.  Stylistically, I often refer to my East Asian background for inspiration, but especially in light of current social circumstances, I wanted to proudly reflect that formative part of my identity in my work and demonstrate the beautiful aspects of my culture. I have found that this project speaks specifically to my Chinese American identity because I am representing a very western notion of the 4 elements (in contrasts to the 5 Elements Theory often found throughout traditional Chinese thought) but am still expressing a traditionally East Asian sensibility. 
+  
+  Through this very personal compilation of drawings, I consequently hope that my project forms a cohesive story of the harmony of the elemental forces, showcases the complex and changeable “personalities” of each element, and serves as a tool to place humankind in perspective of nature.
+
+
