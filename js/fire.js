@@ -131,6 +131,7 @@ window.requestAnimationFrame(enter);
 window.requestAnimationFrame(swing);
 
 window.addEventListener('load', setup);
+window.addEventListener('resize', setup);
 // window.requestAnimationFrame(fly);
 // window.addEventListener('load', setup);
 // window.addEventListener('resize', setup);
