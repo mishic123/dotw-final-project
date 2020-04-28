@@ -1,0 +1,90 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	overflow: hidden;
+}
+body{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+canvas{
+	position:fixed;
+	top:0;
+	z-index:-1000;
+}
+
+.elements{
+	position: relative;
+    margin: 0;
+    height:400px;
+    width:400px;
+    border-radius: 100%;
+}
+
+
+img{
+	width:100px;
+	height:auto;
+}
+
+#water{
+	position: absolute;
+	opacity:0;
+	top:0;
+	left:150px;
+}
+#earth{
+	position: absolute;
+	opacity:0;
+	top:150px;
+	right:0px;
+}
+#fire{
+	position: absolute;
+	opacity:0;
+	bottom:0;
+	left:150px;
+}
+#air{
+	position: absolute;
+	opacity:0;
+	top:150px;
+	left:0px;
+}
+
+#water-icon{
+	position:absolute;
+	opacity: 0;
+	z-index:1000;
+}
+#earth-icon{
+	position:absolute;
+	opacity: 0;
+	z-index:1001;
+}
+#fire-icon{
+	position:absolute;
+	opacity: 0;
+	z-index:1002;
+}
+#air-icon{
+	position:absolute;
+	opacity: 0;
+	z-index:1003;
+}
+
+#chop{
+	position: fixed;
+	bottom:5%;
+	right:5%;
+}
+
+#chop:hover{
+	opacity:0.5;
+	transition-duration: 0.5s;
+}
+

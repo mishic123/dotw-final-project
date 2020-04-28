@@ -2,6 +2,11 @@
 const backClouds = document.querySelector('.image1');
 const frontClouds = document.querySelector('.image2');
 
+const canvas = document.getElementById('background');
+const context = canvas.getContext('2d');
+let pxScale = window.devicePixelRatio;
+const image = document.getElementById('paper');
+
 let rate = 0.1;
 let newRate = 0;
 
@@ -22,9 +27,34 @@ let yChange2 = 2;
 let yPos2 = -300;
 
 //person variables
-const person = document.querySelector('.person');
+const person = document.querySelector('img.person');
 let rotation = 0;
 let rotationRate = 0.5;
+
+ function setup() {
+        // full browser canvas
+
+        width = window.innerWidth;
+        height = window.innerHeight;
+
+        // set the CSS display size
+        canvas.style.width = width + 'px';
+        canvas.style.height = height + 'px';
+
+        canvas.width = width * pxScale;
+        canvas.height = height * pxScale;
+
+        // normalize the coordinate system
+        context.scale(pxScale, pxScale);
+
+        draw();
+      }
+
+function draw(){
+
+    //background
+    context.drawImage(image, 0, 0, width, height);
+      }
 
 //cloud animation
 function floatingClouds(){
@@ -35,7 +65,6 @@ function floatingClouds(){
   if (newRate > 50 || newRate < -5){
     rate *= -1;
   }
-cancelAnimationFrame(floatingClouds); 
 requestAnimationFrame(floatingClouds);
 }
 
@@ -56,7 +85,6 @@ if(scale > 1.5 || scale < 1){
     scaleChange *= -1;
   }
 
-cancelAnimationFrame(fireBreathing); 
 requestAnimationFrame(fireBreathing);
 
 }
@@ -78,7 +106,7 @@ if(yPos > -300){
   }
 
 
-cancelAnimationFrame(enter); 
+
 requestAnimationFrame(enter);
 }
 
@@ -93,18 +121,16 @@ rotation += rotationRate;
     rotationRate *= -1;
   }
 
-  cancelAnimationFrame(swing); 
 requestAnimationFrame(swing);
 }
-
-
-
 
 
 window.requestAnimationFrame(floatingClouds);
 window.requestAnimationFrame(fireBreathing);
 window.requestAnimationFrame(enter);
 window.requestAnimationFrame(swing);
+
+window.addEventListener('load', setup);
 // window.requestAnimationFrame(fly);
 // window.addEventListener('load', setup);
 // window.addEventListener('resize', setup);
