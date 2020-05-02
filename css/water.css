@@ -29,7 +29,7 @@ canvas{
 .waveR{background-image:url('../media/wavesR.png');}
 .waveL{background-image:url('../media/wavesL.png');}
 
-.person{background-image:url('../media/water-person.png');}
+.person{background-image:url('../media/boat.png');}
 
 .waves1,.waves2,.waves3,.waves4,.waves5,.waves6,.waves7,.waves8,.waves9,.waves10, .waves11, .waves12, .waveR, .waveL, .person, .fullWaves{
 	opacity: 0.9;

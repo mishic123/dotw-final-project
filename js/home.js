@@ -27,6 +27,8 @@ const waterIcon = document.getElementById('water-icon');
 const earthIcon = document.getElementById('earth-icon');
 const airIcon = document.getElementById('air-icon');
 
+const elements = document.querySelector('.elements');
+
 
 
 
@@ -58,11 +60,12 @@ function draw(){
 		//circle interface
 		// context.strokeStyle = 'rgba(194,33,33,1)';
 		context.strokeStyle = 'rgba(0,0,0,1)';
-		context.lineWidth = 4;
+		context.lineWidth = 1;
 		context.beginPath();
 		context.ellipse(canvas.width/2, canvas.height/2, 200, 200,0, 0, 2 * Math.PI, false);
 		context.closePath();
 		context.stroke();
+
 }
 
 function load(){
@@ -93,14 +96,14 @@ function load(){
 
 function waterOn(){
 	requestAnimationFrame(waterOn);
-	waterIcon.style.transitionDuration = '0.7s';
+	waterIcon.style.transitionDuration = '0.5s';
 	waterIcon.style.opacity = '1';
-	fire.style.transitionDuration = '0.7s';
-	fire.style.opacity = '0.2';
-	earth.style.transitionDuration = '0.7s';
-	earth.style.opacity = '0.2';
-	air.style.transitionDuration = '0.7s';
-	air.style.opacity = '0.2';
+	fire.style.transitionDuration = '0.5s';
+	fire.style.opacity = '0.0';
+	earth.style.transitionDuration = '0.5s';
+	earth.style.opacity = '0.0';
+	air.style.transitionDuration = '0.5s';
+	air.style.opacity = '0.0';
 	
 }
 function waterOff(){
@@ -114,14 +117,14 @@ function waterOff(){
 
 function fireOn(){
 	requestAnimationFrame(fireOn);
-	fireIcon.style.transitionDuration = '0.7s';
+	fireIcon.style.transitionDuration = '0.5s';
 	fireIcon.style.opacity = '1';
-	water.style.transitionDuration = '0.7s';
-	water.style.opacity = '0.2';
-	earth.style.transitionDuration = '0.7s';
-	earth.style.opacity = '0.2';
-	air.style.transitionDuration = '0.7s';
-	air.style.opacity = '0.2';
+	water.style.transitionDuration = '0.5s';
+	water.style.opacity = '0.0';
+	earth.style.transitionDuration = '0.5s';
+	earth.style.opacity = '0.0';
+	air.style.transitionDuration = '0.5s';
+	air.style.opacity = '0.0';
 	
 }
 function fireOff(){
@@ -134,14 +137,14 @@ function fireOff(){
 
 function earthOn(){
 	requestAnimationFrame(earthOn);
-	earthIcon.style.transitionDuration = '0.7s';
+	earthIcon.style.transitionDuration = '0.5s';
 	earthIcon.style.opacity = '1';
-	fire.style.transitionDuration = '0.7s';
-	fire.style.opacity = '0.2';
-	water.style.transitionDuration = '0.7s';
-	water.style.opacity = '0.2';
-	air.style.transitionDuration = '0.7s';
-	air.style.opacity = '0.2';
+	fire.style.transitionDuration = '0.5s';
+	fire.style.opacity = '0.0';
+	water.style.transitionDuration = '0.5s';
+	water.style.opacity = '0.0';
+	air.style.transitionDuration = '0.5s';
+	air.style.opacity = '0.0';
 	
 }
 function earthOff(){
@@ -154,14 +157,14 @@ function earthOff(){
 
 function airOn(){
 	requestAnimationFrame(airOn);
-	airIcon.style.transitionDuration = '0.7s';
+	airIcon.style.transitionDuration = '0.5s';
 	airIcon.style.opacity = '1';
-	fire.style.transitionDuration = '0.7s';
-	fire.style.opacity = '0.2';
-	water.style.transitionDuration = '0.7s';
-	water.style.opacity = '0.2';
-	earth.style.transitionDuration = '0.7s';
-	earth.style.opacity = '0.2';
+	fire.style.transitionDuration = '0.5s';
+	fire.style.opacity = '0.0';
+	water.style.transitionDuration = '0.5s';
+	water.style.opacity = '0.0';
+	earth.style.transitionDuration = '0.5s';
+	earth.style.opacity = '0.0';
 	
 }
 function airOff(){
@@ -174,6 +177,30 @@ function airOff(){
 }
 
 
+function hoverPause(){
+	fire.style.animationPlayState = "paused";
+	earth.style.animationPlayState = "paused";
+	water.style.animationPlayState = "paused";
+	air.style.animationPlayState = "paused";
+	elements.style.animationPlayState = "paused";
+}
+
+function hoverPlay(){
+	fire.style.animationPlayState = "running";
+	earth.style.animationPlayState = "running";
+	water.style.animationPlayState = "running";
+	air.style.animationPlayState = "running";
+	elements.style.animationPlayState = "running";
+}
+
+fire.addEventListener('mouseenter', hoverPause);
+fire.addEventListener('mouseleave', hoverPlay);
+earth.addEventListener('mouseenter', hoverPause);
+earth.addEventListener('mouseleave', hoverPlay);
+water.addEventListener('mouseenter', hoverPause);
+water.addEventListener('mouseleave', hoverPlay);
+air.addEventListener('mouseenter', hoverPause);
+air.addEventListener('mouseleave', hoverPlay);
 
 window.addEventListener('load', setup);
 window.requestAnimationFrame(load);

@@ -23,37 +23,51 @@ canvas{
     height:400px;
     width:400px;
     border-radius: 100%;
+    animation: circle 15s linear infinite;
+    animation-delay: 3.2s;
 }
+.elements:hover{
+animation-play-state:paused;
 
+}
 
 img{
 	width:100px;
 	height:auto;
 }
 
+#fire, #water, #earth, #air{
+	animation: inner 15s linear infinite;
+	 animation-delay: 3.2s;
+}
+
+#fire:hover, #water:hover, #earth:hover, #air:hover{
+	 animation-play-state:paused;
+}
+
 #water{
 	position: absolute;
 	opacity:0;
-	top:0;
+	top:20px;
 	left:150px;
 }
 #earth{
 	position: absolute;
 	opacity:0;
 	top:150px;
-	right:0px;
+	right:20px;
 }
 #fire{
 	position: absolute;
 	opacity:0;
-	bottom:0;
+	bottom:20px;
 	left:150px;
 }
 #air{
 	position: absolute;
 	opacity:0;
 	top:150px;
-	left:0px;
+	left:20px;
 }
 
 #water-icon{
@@ -76,6 +90,17 @@ img{
 	opacity: 0;
 	z-index:1003;
 }
+
+@keyframes circle {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(360deg); }
+}
+
+@keyframes inner {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(-360deg); }
+}
+
 
 #chop{
 	position: fixed;

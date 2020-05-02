@@ -44,9 +44,9 @@ svg{
 
 .fullTree {background-image:url('../media/fullTree.png');} 
 .branches {background-image:url('../media/branches.png');} 
-.petal1 {background-image:url('../media/petal1.png');} 
-.petal2 {background-image:url('../media/petal2.png');}
-.petal3 {background-image:url('../media/petal3.png');}
+.petal1 {background-image:url('../media/petals1.png');} 
+.petal2 {background-image:url('../media/petals2.png');}
+.petal3 {background-image:url('../media/petals3.png');}
 .swing {background-image:url('../media/swing.png');}
 .air {background-image:url('../media/air.svg');}
 
@@ -90,6 +90,55 @@ svg{
 
 .branches{
 	transform-origin: center center;
+}
+
+.petal1{
+	 transition-property: transform;
+	animation: fly 5s infinite;
+}
+
+.petal2{
+transition-property: transform;
+	animation: fly2 5s infinite;
+}
+
+.petal3{
+	transition-property: transform;
+	animation: fly3 5s infinite;
+}
+
+@keyframes fly{
+	from{
+		transform: translateX(0px) translateY(0px);
+		opacity: 1;
+	}
+	to{
+		transform: translateX(500px)translateY(-500px);
+		opacity: 0;
+	}
+}
+
+@keyframes fly2{
+	from{
+		transform: translateX(0px) translateY(0px);
+		opacity: 1;
+	}
+	to{
+		transform: translateX(550px)translateY(-300px);
+		opacity: 0;
+	}
+}
+@keyframes fly3{
+	from{
+		transform: translateX(0px) translateY(0px);
+		opacity: 1;
+	}
+
+	
+	to{
+		transform: translateX(600px)translateY(-400px);
+		opacity: 0;
+	}
 }
 
 #chop{

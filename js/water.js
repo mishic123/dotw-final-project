@@ -18,10 +18,14 @@ const leftWave = document.querySelector('.waveL-image');
 //person variables
 const person = document.querySelector('.person-image');
 let yPos = 0;
-let yChange = 1;
+let yChange = 0.5;
+// const boat = document.querySelector('.person');
+let xPos = 0;
+let xChange = 0.5;
 
 let width;
 let height;
+
 
 //wave variables
 const wave1 = document.querySelector('.image1');
@@ -91,17 +95,22 @@ requestAnimationFrame(crash);
 }
 
 function float(){
-    yPos += yChange; 
-    person.style.transform = 'translateY(' + yPos + 'px)';
 
-if(yPos > 70 || yPos <= 0){
+    yPos += yChange; 
+    xPos += xChange; 
+    person.style.transform = 'translateY(' + yPos + 'px) translateX(' + xPos + 'px)';
+    // boat.style.transform = 'translateX(' + xPos + 'px)';
+
+if(yPos > 50 || yPos < 0){
     yChange *= -1;
+  }
+  if(xPos > 20 || xPos < -20){
+    xChange *= -1;
   }
 
 requestAnimationFrame(float);
 
 }
-
 
 
 

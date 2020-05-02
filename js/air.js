@@ -17,8 +17,11 @@ let rotation = 0.1;
 
 //swing variable
 const swing = document.querySelector('.swing');
+const swingContainer = document.querySelector('.swing-image');
 let swingRotate = 0;
 let swingRate = -0.3;
+let swingYnew = 0.5;
+let swingY = 0.5;
 
 //petal variables
 const petal1 = document.querySelector('.petal1');
@@ -53,18 +56,28 @@ context.drawImage(image, 0, 0, width, height);
 
 function sway(){
 
-    rotateBranches += rotation
+    rotateBranches += rotation;
+    swingRotate += swingRate;
+    swingYnew += swingY;
+
+
     branches.style.transform = 'rotateZ(' + rotateBranches + 'deg)';
-    swing.style.transform = 'rotateZ(' + (rotateBranches * -1) + 'deg)';
+    swing.style.transform = 'rotateZ(' + swingRotate + 'deg)';
+    swingContainer.style.transform = 'translateY(' + swingYnew + 'px)';
+
     if(rotateBranches < -5 || rotateBranches > 10) {
         rotation *= -1;
+        swingRate *= -1;
+        swingY *= -1;
     }
+
+
 
     requestAnimationFrame(sway);
 }
 
 function fly(){
-    
+
 }
 
 
