@@ -20,6 +20,9 @@ const person = document.querySelector('.person-image');
 let yPos = 0;
 let yChange = 1;
 
+let width;
+let height;
+
 //wave variables
 const wave1 = document.querySelector('.image1');
 const wave2 = document.querySelector('.image2');
@@ -33,6 +36,25 @@ const wave9 = document.querySelector('.image9');
 const wave10 = document.querySelector('.image10');
 const wave11 = document.querySelector('.image11');
 const wave12 = document.querySelector('.image12');
+ function setup() {
+        // full browser canvas
+
+        width = window.innerWidth;
+        height = window.innerHeight;
+
+        // set the CSS display size
+        canvas.style.width = width + 'px';
+        canvas.style.height = height + 'px';
+
+        canvas.width = width * pxScale;
+        canvas.height = height * pxScale;
+
+        // normalize the coordinate system
+        context.scale(pxScale, pxScale);
+
+        draw();
+      }
+
 
 function shift(){
     newRate += rate;
@@ -82,24 +104,6 @@ requestAnimationFrame(float);
 
 
 
- function setup() {
-        // full browser canvas
-
-        width = window.innerWidth;
-        height = window.innerHeight;
-
-        // set the CSS display size
-        canvas.style.width = width + 'px';
-        canvas.style.height = height + 'px';
-
-        canvas.width = width * pxScale;
-        canvas.height = height * pxScale;
-
-        // normalize the coordinate system
-        context.scale(pxScale, pxScale);
-
-        draw();
-      }
 
 function draw(){
 

@@ -1,0 +1,62 @@
+body{
+	margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+	}
+canvas{
+	position:fixed;
+	top:0;
+	z-index:-10000;
+	margin:0;
+}
+.fog{
+	opacity: 0.5;
+}
+
+/*full browser images*/
+.mountainL {background-image:url('../media/leftMountain.png');} 
+.mountainR {background-image:url('../media/rightMountain.png');} 
+.trees {background-image:url('../media/trees.png');} 
+.leftRock {background-image:url('../media/leftRocks.png');}
+.fallingRock {background-image:url('../media/rock.gif');}
+.fallingRock2 {background-image:url('../media/rock2.gif');}
+.person {background-image:url('../media/earth-person.png');}
+.earthBackground {background-image:url('../media/earthBackground.png');}
+.fog {background-image:url('../media/fog.gif');}
+
+.mountainL, .mountainR, .leftRock, .fallingRock,.fallingRock2, .person, .trees, .earthBackground, .fog{
+/*	opacity: 0.9;*/
+	position:absolute;
+	background-size:cover;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:100vh;
+	background-position:bottom;
+
+}
+
+.mountain-left, .mountain-right, .leftRock-image, .rockGif,.rockGif2, .person-image, .tree-image, .backgroundImage, .fog-image{
+	position:absolute;
+    bottom:0;
+    left:0;
+    height:100vh;
+    width:100%;
+    transform-origin: top right;
+}
+
+#chop{
+	width:100px;
+	height:auto;
+	position: fixed;
+	bottom:5%;
+	right:5%;
+
+}
+
+#chop:hover{
+	opacity:0.5;
+	transition-duration: 0.5s;
+}

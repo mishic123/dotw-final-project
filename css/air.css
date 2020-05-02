@@ -1,0 +1,107 @@
+body{
+	margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+	}
+canvas{
+	position:fixed;
+	top:0;
+	z-index:-10000;
+	margin:0;
+}
+svg{
+	position: fixed;
+	z-index: 100000;
+	width:75vw;
+	height: auto;
+	bottom:0;
+	left:0;
+}
+
+
+/*animate wid*/
+.path2, .path3{
+   stroke-dasharray: 5000;
+  stroke-dashoffset: 5000;
+  animation: dash 5s linear infinite;
+}
+
+.path{
+	stroke-dasharray: 7000;
+  stroke-dashoffset: 7000;
+  animation: dash 5s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0;
+
+  }
+}
+
+.fullTree {background-image:url('../media/fullTree.png');} 
+.branches {background-image:url('../media/branches.png');} 
+.petal1 {background-image:url('../media/petal1.png');} 
+.petal2 {background-image:url('../media/petal2.png');}
+.petal3 {background-image:url('../media/petal3.png');}
+.swing {background-image:url('../media/swing.png');}
+.air {background-image:url('../media/air.svg');}
+
+
+
+.fullTree, .swing, .air{
+/*	opacity: 0.9;*/
+	position:absolute;
+	background-size:cover;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:100vh;
+	background-position:bottom;
+
+}
+
+
+ .branches, .petal1, .petal2, .petal3{
+ 	position:absolute;
+	background-size:cover;
+	bottom:-30px;
+	left:0px;
+	width:100%;
+	height:100vh;
+	background-position:bottom;
+ }
+
+.fullTree-image, .branches-image, .petal1-image, .petal2-image, .petal3-image, .swing-image, .air-image{
+	position:absolute;
+    bottom:0;
+    left:0;
+    height:100vh;
+    width:100%;
+    transform-origin: top right;
+}
+
+.swing{
+	transform-origin: top center;
+}
+
+.branches{
+	transform-origin: center center;
+}
+
+#chop{
+	width:100px;
+	height:auto;
+	position: fixed;
+	bottom:5%;
+	right:5%;
+
+}
+
+#chop:hover{
+	opacity:0.5;
+	transition-duration: 0.5s;
+}

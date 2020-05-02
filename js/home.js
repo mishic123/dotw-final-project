@@ -60,7 +60,7 @@ function draw(){
 		context.strokeStyle = 'rgba(0,0,0,1)';
 		context.lineWidth = 4;
 		context.beginPath();
-		context.ellipse(canvas.width/4, canvas.height/4, 200, 200,0, 0, 2 * Math.PI, false);
+		context.ellipse(canvas.width/2, canvas.height/2, 200, 200,0, 0, 2 * Math.PI, false);
 		context.closePath();
 		context.stroke();
 }
