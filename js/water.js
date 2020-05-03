@@ -8,9 +8,9 @@ let newRate = 0;
 
 //big wave variables
 let scale = 0.3;
-let scaleChange = 0.005;
+let scaleChange = 0.002;
 let scale2 = 1;
-let scaleChange2 = -0.005;
+let scaleChange2 = -0.002;
 
 const rightWave = document.querySelector('.waveR-image');
 const leftWave = document.querySelector('.waveL-image');

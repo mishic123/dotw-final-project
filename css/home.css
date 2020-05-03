@@ -26,10 +26,7 @@ canvas{
     animation: circle 15s linear infinite;
     animation-delay: 3.2s;
 }
-.elements:hover{
-animation-play-state:paused;
 
-}
 
 img{
 	width:100px;
@@ -41,9 +38,6 @@ img{
 	 animation-delay: 3.2s;
 }
 
-#fire:hover, #water:hover, #earth:hover, #air:hover{
-	 animation-play-state:paused;
-}
 
 #water{
 	position: absolute;

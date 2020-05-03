@@ -62,7 +62,7 @@ function draw(){
 		context.strokeStyle = 'rgba(0,0,0,1)';
 		context.lineWidth = 1;
 		context.beginPath();
-		context.ellipse(canvas.width/2, canvas.height/2, 200, 200,0, 0, 2 * Math.PI, false);
+		context.ellipse(canvas.width/4, canvas.height/4, 200, 200,0, 0, 2 * Math.PI, false);
 		context.closePath();
 		context.stroke();
 
@@ -193,6 +193,11 @@ function hoverPlay(){
 	elements.style.animationPlayState = "running";
 }
 
+
+window.addEventListener('load', setup);
+window.addEventListener('resize', setup);
+window.requestAnimationFrame(load);
+
 fire.addEventListener('mouseenter', hoverPause);
 fire.addEventListener('mouseleave', hoverPlay);
 earth.addEventListener('mouseenter', hoverPause);
@@ -201,10 +206,6 @@ water.addEventListener('mouseenter', hoverPause);
 water.addEventListener('mouseleave', hoverPlay);
 air.addEventListener('mouseenter', hoverPause);
 air.addEventListener('mouseleave', hoverPlay);
-
-window.addEventListener('load', setup);
-window.requestAnimationFrame(load);
-window.addEventListener('resize', setup);
 
 water.addEventListener('mouseenter', waterOn);
 water.addEventListener('mouseleave', waterOff);

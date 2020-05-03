@@ -13,7 +13,7 @@ let newRate = 0;
 //fire variables
 const fire = document.querySelector('img.fire');
 let opacity = 0;
-let opacityChange = 0.005;
+let opacityChange = 0.01;
 
 let scale = 1;
 let scaleChange = 0.005;
@@ -74,15 +74,13 @@ function fireBreathing(){
   opacity += opacityChange;
   fire.style.opacity = opacity;
 
-  if(opacity > 1 || opacity < 0){
-    opacityChange *= -1;
-  }
 
   scale += scaleChange; 
   fire.style.transform = 'scale(' + scale + ')';
 
 if(scale > 1.5 || scale < 1){
     scaleChange *= -1;
+     opacityChange *= -1;
   }
 
 requestAnimationFrame(fireBreathing);

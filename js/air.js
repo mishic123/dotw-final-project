@@ -20,8 +20,8 @@ const swing = document.querySelector('.swing');
 const swingContainer = document.querySelector('.swing-image');
 let swingRotate = 0;
 let swingRate = -0.3;
-let swingYnew = 0.5;
-let swingY = 0.5;
+let swingYnew = 0;
+let swingY = 0.1;
 
 //petal variables
 const petal1 = document.querySelector('.petal1');
@@ -63,7 +63,7 @@ function sway(){
 
     branches.style.transform = 'rotateZ(' + rotateBranches + 'deg)';
     swing.style.transform = 'rotateZ(' + swingRotate + 'deg)';
-    swingContainer.style.transform = 'translateY(' + swingYnew + 'px)';
+    swingContainer.style.transform = 'translateY(' + swingYnew + '%)';
 
     if(rotateBranches < -5 || rotateBranches > 10) {
         rotation *= -1;

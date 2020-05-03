@@ -11,6 +11,14 @@ canvas{
 	z-index:-1000;
 }
 
+audio{
+	position:fixed;
+	bottom:0;
+	left:0;
+	mix-blend-mode: lighten;
+	z-index: 250000;
+}
+
 .waves1 {background-image:url('../media/waves1.png');} 
 .waves2 {background-image:url('../media/waves2.png');} 
 .waves3 {background-image:url('../media/waves3.png');}
