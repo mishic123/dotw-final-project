@@ -65,7 +65,7 @@ function sway(){
     swing.style.transform = 'rotateZ(' + swingRotate + 'deg)';
     swingContainer.style.transform = 'translateY(' + swingYnew + '%)';
 
-    if(rotateBranches < -5 || rotateBranches > 10) {
+    if(rotateBranches < -2 || rotateBranches > 8) {
         rotation *= -1;
         swingRate *= -1;
         swingY *= -1;
@@ -74,10 +74,6 @@ function sway(){
 
 
     requestAnimationFrame(sway);
-}
-
-function fly(){
-
 }
 
 
